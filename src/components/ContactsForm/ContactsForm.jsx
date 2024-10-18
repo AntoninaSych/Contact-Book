@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/contactsOps'; // Імпорт з contactsOps.js
+import { addContact } from '../../redux/contactsOps';
 import { selectContacts } from '../../redux/contactsSlice';
 import { useFormik } from 'formik';
 import styles from './ContactsForm.module.css';
@@ -18,8 +18,6 @@ const validate = values => {
         errors.number = 'Phone number is required';
     } else if (!/^[0-9]+$/.test(values.number)) {
         errors.number = 'Phone number must contain only digits';
-    } else if (values.number.length < 7) {
-        errors.number = 'Phone number must be at least 7 digits';
     }
 
     return errors;

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchContacts } from './redux/contactsOps'; // Імпортуємо операцію fetchContacts
+import { fetchContacts } from './redux/contactsOps';
 import ContactsForm from './components/ContactsForm/ContactsForm';
 import ContactList from './components/ContactList/ContactList';
 import SearchBox from './components/SearchBox/SearchBox';
